@@ -29,6 +29,12 @@ elif [ $1 == "bcm2711" ]; then
         export IMAGE=zImage
         export DTS_SUBDIR=
         make O=build bcm2711_defconfig
+elif [ $1 == "multi_v7" ]; then
+	export ARCH=arm
+	export kernel=kernel
+	export IMAGE=zImage
+	export DTS_SUBDIR=
+	make O=build multi_v7_defconfig
 elif [ $1 == "bcm2711_arm64" ]; then
 	export ARCH=arm64
         export kernel=kernel8
