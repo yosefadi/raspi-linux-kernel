@@ -62,3 +62,4 @@ make O=build INSTALL_MOD_PATH=../install modules_install
 cp build/arch/$ARCH/boot/dts/$DTS_SUBDIR/*.dtb install/boot/overlays/
 cp build/arch/$ARCH/boot/dts/$DTS_SUBDIR/overlays/*.dtb* install/boot/overlays/
 cp build/arch/$ARCH/boot/$IMAGE install/boot/$kernel.img
+cp install.sh install/
