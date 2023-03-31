@@ -11,6 +11,8 @@ mount -t vfat $RASPI_BOOT_PART /mnt/raspi/boot
 mount -t ext4 $RASPI_ROOT_PART /mnt/raspi/root
 
 # Copy the kernel and modules
+mkdir -p /mnt/raspi/boot/old.kernel
+mv /mnt/raspi/boot/kernel* /mnt/raspi/boot/old.kernel/
 cp -Rf boot/* /mnt/raspi/boot/
 cp -Rf lib/* /mnt/raspi/root/lib/
 
